@@ -1,0 +1,287 @@
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+body{
+  font-size: 1.6rem;
+  height: 100%;
+ 
+}
+header{
+  min-height: 100vh;
+  width: 40vw;
+  background-image: url(/photo-1542272201-b1ca555f8505.jpeg.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+
+img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mainContainer{
+  display: flex;
+}
+main{
+  width: 100%;
+  margin: auto 0;
+}
+.paraInfor{
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+
+p{
+  max-width: 70ch;
+  font-weight: bold;
+}
+.paraInfor{
+  margin-left: 2.5rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.inputContainer{
+  padding-top: 0.1rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  background-color: rgba(54, 127, 175, 0.5);
+}
+.inputContainer p{
+  margin-left: 2.5rem;
+  font-size: 2rem;
+}
+.inputContainer > div{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(1rem,1fr));
+  grid-template-rows: repeat(3,minmax(1rem,1fr));
+  margin-left: 2.5rem;
+  width: 80%;
+}
+section > div:nth-child(3){
+  margin-left: 2.5rem;
+}
+.inputContainer div input{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22rem;
+  min-height: 3rem;
+  margin-bottom: 3rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 0.1rem solid gray;
+  padding-left: 1rem;
+}
+
+label{
+  font-size: 1.3rem;
+  display: block;
+}
+button{
+  width:  17rem;
+  min-height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background:rgba(54, 127, 175, 0.9);
+  color: white;
+ 
+}
+.inputContainer div input:focus{
+  border-color: blue;
+}
+.inputContainer div input:invalid:not(:placeholder-shown){
+  border-color: red;
+}
+input + span{
+  position: relative;
+  font-size: 1.2rem;
+}
+input + span::before{
+  position: absolute;
+  width: 22rem;
+  right: -0.3rem;
+  top: 2.5rem;
+
+}
+
+
+input[type='email']:invalid:not(:placeholder-shown) + span::before{
+  content: 'Please enter a valid email.';
+  color: red;
+  
+}
+input[type='tel']:invalid:not(:placeholder-shown) + span::before{
+  content: 'Please enter a valid phone number.';
+  color: red;
+  
+}
+
+
+.inputContainer div > :nth-child(5), :nth-child(6){
+  position: relative;
+}
+
+.inputContainer div > :nth-child(5) .passwordText{
+
+  position: absolute;
+  top: -0.3rem;
+  left: 17.7rem;
+  font-size: 1.2rem;
+  
+}
+
+
+#firstpassword:invalid:not(:placeholder-shown) ~ .invalidPassword::before{
+  content: 'Minimum of 8 characters that consist of least one number,one uppercase.';
+  color: red;
+  font-size: 1rem;
+  position: absolute;
+  width: 22rem;
+  right: -0.3rem;
+  top: 2.8rem;
+  font-size: 1.2rem;
+  
+}
+
+.validitySignal{
+  position: absolute;
+  top: 4.8rem;
+  left: 0rem;
+  font-size: 1.2rem;
+  color: red;
+}
+.fa-eye{
+  position: absolute;
+  top: 0;
+  left: 16rem;
+  font-size: 1.1rem;
+
+}
+.fa-eye-slash{
+  position: absolute;
+  top: 0;
+  left: 16rem;
+  font-size: 1.1rem;
+
+}
+.hidden{
+visibility: hidden;
+}
+
+@media(max-width: 950px){
+ 
+  .mainContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  header{
+    min-height: 10vh;
+    width: 100vw;
+    
+  }
+  .paraInfor,section > div:nth-child(3){
+    margin-left: 0;
+  }
+  main{
+    width: 90%;
+    margin: auto auto;
+  }
+  .inputContainer > div{
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    
+  }
+  .validitySignal{
+    top: 4.9rem;
+   
+  }
+  #firstpassword:invalid:not(:placeholder-shown) ~ .invalidPassword::before{
+  
+    position: absolute;
+    top: 2.8rem;
+    margin-bottom: 1.5rem;
+   
+    
+  }
+  .inputContainer div > :nth-child(5){
+    margin-bottom: 0.8rem
+  }
+ 
+
+ 
+}
+
+@media(max-width: 780px){
+  .inputContainer > div{
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    
+  }
+  .inputContainer div input{
+    margin-bottom: 0rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    
+  }
+  .paraInfor{
+    font-size: 1.6rem;
+  }
+  .inputContainer p{
+    font-size: 1.6rem;
+  }
+  label{
+    font-size: 1.1rem;
+  }
+  .inputContainer div > :nth-child(5) .passwordText{
+    font-size: 1rem;
+  }
+  .fa-eye, .fa-eye-slash{
+    font-size: 1rem;
+  }
+  .inputContainer div > :nth-child(5) .passwordText{
+    top: -0rem;
+    left: 17.7rem;
+  }
+  input + span{
+    font-size: 1rem;
+  }
+  input + span::before{
+    top: 2rem;
+  }
+  .invalidPassword, .validitySignal{
+    font-size: 1rem;
+  }
+  .validitySignal{
+    top: 4.4rem;
+   
+  }
+  #firstpassword:invalid:not(:placeholder-shown) ~ .invalidPassword::before{
+  
+    position: absolute;
+    top: 2rem;
+    font-size: 1rem;
+   
+  }
+
+  
+}
+@media(max-width:310px){
+  #firstpassword:invalid:not(:placeholder-shown) ~ .invalidPassword::before{
+   
+    position: absolute;
+    width: 22rem;
+    right: -22rem;
+    top: -1.1rem;
+  
+    
+  }
+}
