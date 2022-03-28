@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="mainContainer">
+    <header>
+   
+    </header>
+    <main>
+      <section>
+        <div class="paraInfor">
+          <p>
+            This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.
+          </p>
+          <p>You know you want to.</p>
+        </div>
+        <div class="inputContainer">
+          <p>Let's do this!</p>
+          <div>
+            <div>
+              <label for="name">FIRST NAME</label>
+              <input type="text" name="name" id="name" required placeholder=" " maxlength="50">
+            </div>
+            <div>
+              <label for="surname">LAST NAME</label>
+              <input type="text" name="surname" id="surname" required placeholder=" " maxlength="50">
+            </div>
+            <div>
+              <label for="email">EMAIL</label>
+              <input type="email" name="email" id="email" required placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3,}$" maxlength="50">
+              <span></span>
+            </div>
+            <div>
+              <label for="phoneNumber">PHONE NUMBER</label>
+              <input type="tel" name="phoneNumber" id="phoneNumber" required minlength="10" placeholder=" " maxlength="50">
+              <span></span>
+            </div>
+            <div>
+              <label for="firstpassword">PASSWORD</label>
+              <input type="password" name="password" id="firstpassword" required minlength="8" placeholder=" "
+              maxlength="20"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
+              <i class="fa fa-eye"></i>
+              <i class="fa fa-eye-slash hidden"></i>
+              <span class="passwordText">Show</span>
+              <span class="invalidPassword"> </span>
+            </div>
+            <div>
+              <label for="confirmPassword">CONFIRM PASSWORD</label>
+              <input type="password" name="confirmPassword" id="confirmPassword" required placeholder=" "  maxlength="20">
+              <span class="validitySignal"></span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="submit">Create Account</button>
+          <p>Already have an account? Log in</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+
+</body>
+</html>
